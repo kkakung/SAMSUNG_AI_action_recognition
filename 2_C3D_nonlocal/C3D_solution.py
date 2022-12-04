@@ -66,17 +66,21 @@ class C3D(nn.Module):
         #============================================================
         x = self.relu(self.conv1(x))
         x = self.pool1(x)
+        #x = self.nonlocal1(x)
 
         x = self.relu(self.conv2(x))
         x = self.pool2(x)
+        #x = self.nonlocal2(x)
 
         x = self.relu(self.conv3a(x))
         x = self.relu(self.conv3b(x))
         x = self.pool3(x)
+        #x = self.nonlocal3(x)
 
         x = self.relu(self.conv4a(x))
         x = self.relu(self.conv4b(x))
         x = self.pool4(x)
+        #x = self.nonlocal4(x)
 
         x = self.relu(self.conv5a(x))
         x = self.relu(self.conv5b(x))
